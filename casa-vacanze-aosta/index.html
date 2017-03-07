@@ -104,7 +104,7 @@
 			</div>
 		</header>
 
-		<section id="fh5co-intro" data-section="intro" style="background-image: url(images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+		<section id="fh5co-home" data-section="intro" style="background-image: url(images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
 			<div class="gradient"></div>
 			<div class="container">
 				<div class="text-wrap">
@@ -370,7 +370,7 @@
 			</div>
 		</section>-->
 
-		<section id="fh5co-contacts" data-section="contacts">
+		<section id="fh5co-contact" data-section="contacts">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 section-heading text-center">
@@ -467,7 +467,7 @@
 		<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 		<script type="text/javascript" src="js/magnific-popup-options.js"></script>
 		<!-- Google Map -->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 		<script type="text/javascript" src="js/google_map.js"></script>
 
 		<!-- Main JS (Do not remove) -->
@@ -478,8 +478,8 @@
 				$('form.contacts-form').on('submit', function(e) {
 					e.preventDefault();
 					$.ajax({
+						method: 'POST',
 						dataType: 'json',
-						method: $(this).attr('method'),
 						url: $(this).attr('action'),
 						data: $(this).serialize(),
 						success: function(data) {

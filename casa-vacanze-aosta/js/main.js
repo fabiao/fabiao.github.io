@@ -195,7 +195,7 @@
 
 
 		// Animations
-		//animateSection('home', 'fadeInUp', 200);
+		animateSection('home', 'fadeInUp', 200);
 		animateSection('intro', 'fadeInRight', 1000);
 		animateSection('house', 'fadeInUp', 200);
 		//animateSection('about', 'fadeInUp', 200);
