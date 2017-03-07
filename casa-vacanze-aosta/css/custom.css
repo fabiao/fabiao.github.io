@@ -1,0 +1,11 @@
+#fh5co-services, #fh5co-testimonials, #fh5co-prices, #fh5co-work, #fh5co-contact, #fh5co-about, #fh5co-map, #fh5co-weather {
+    padding: 4em 0;
+}
+
+.section-heading {
+	padding-bottom:0;
+}
+
+iframe.fit-width {
+	width:100%;
+}
