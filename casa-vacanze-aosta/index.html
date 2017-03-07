@@ -423,23 +423,6 @@
 							<input class="btn btn-primary btn-lg" value="Invia" type="submit" />
 						</div>
 					</form>	
-					<script type="text/javascript">
-						jQuery(document).ready(function($) {
-							$('form.contacts-form').on('submit', function(e) {
-								e.preventDefault();
-								$.ajax({
-									method: 'POST',
-									dataType: 'json',
-									url: $(this).attr('action'),
-									data: $(this).serialize(),
-									success: function(data) {
-										alert(data);
-									}
-								});
-								return false;
-							});
-						});
-					</script>
 				</div>
 			</div>
 		</section>
@@ -489,7 +472,24 @@
 
 		<!-- Main JS (Do not remove) -->
 		<script type="text/javascript" src="js/main.js"></script>
-
+		
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$('form.contacts-form').on('submit', function(e) {
+					e.preventDefault();
+					$.ajax({
+						method: 'POST',
+						dataType: 'json',
+						url: $(this).attr('action'),
+						data: $(this).serialize(),
+						success: function(data) {
+							alert(data);
+						}
+					});
+					return false;
+				});
+			});
+		</script>
 	</body>
 </html>
 
