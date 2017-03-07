@@ -92,19 +92,19 @@
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 					  <ul class="nav navbar-nav navbar-right">
-						<li><a href="#" data-nav-section="house"><span>La casa</span></a></li>
-						<li><a href="#" data-nav-section="map"><span>Mappa</span></a></li>
-						<li><a href="#" data-nav-section="prices"><span>Prezzi</span></a></li>
-						<li><a href="#" data-nav-section="services"><span>Servizi</span></a></li>
-						<li><a href="#" data-nav-section="contacts"><span>Contatti</span></a></li>
-						<li><a href="#" data-nav-section="weather"><span>Meteo</span></a></li>
+						<li><a href="#fh5co-house" data-nav-section="house"><span>La casa</span></a></li>
+						<li><a href="#fh5co-map" data-nav-section="map"><span>Mappa</span></a></li>
+						<li><a href="#fh5co-prices" data-nav-section="prices"><span>Prezzi</span></a></li>
+						<li><a href="#fh5co-services" data-nav-section="services"><span>Servizi</span></a></li>
+						<li><a href="#fh5co-contacts" data-nav-section="contacts"><span>Contatti</span></a></li>
+						<li><a href="#fh5co-weather" data-nav-section="weather"><span>Meteo</span></a></li>
 					  </ul>
 					</div>
 				</nav>
 			</div>
 		</header>
 
-		<section id="fh5co-home" data-section="intro" style="background-image: url(images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+		<section id="fh5co-intro" data-section="intro" style="background-image: url(images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
 			<div class="gradient"></div>
 			<div class="container">
 				<div class="text-wrap">
@@ -121,7 +121,7 @@
 			<div class="slant"></div>
 		</section>
 
-		<section id="fh5co-work" data-section="house">
+		<section id="fh5co-house" data-section="house">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 section-heading text-center">
@@ -370,7 +370,7 @@
 			</div>
 		</section>-->
 
-		<section id="fh5co-contact" data-section="contacts">
+		<section id="fh5co-contacts" data-section="contacts">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 section-heading text-center">
@@ -478,8 +478,8 @@
 				$('form.contacts-form').on('submit', function(e) {
 					e.preventDefault();
 					$.ajax({
-						method: 'POST',
 						dataType: 'json',
+						method: $(this).attr('method'),
 						url: $(this).attr('action'),
 						data: $(this).serialize(),
 						success: function(data) {

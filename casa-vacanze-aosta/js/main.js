@@ -195,11 +195,11 @@
 
 
 		// Animations
-		animateSection('home', 'fadeInUp', 200);
+		//animateSection('home', 'fadeInUp', 200);
 		animateSection('intro', 'fadeInRight', 1000);
-		animateSection('work', 'fadeInUp', 200);
-		animateSection('about', 'fadeInUp', 200);
-		animateSection('contact', 'fadeInUp', 200);
+		animateSection('house', 'fadeInUp', 200);
+		//animateSection('about', 'fadeInUp', 200);
+		animateSection('contacts', 'fadeInUp', 200);
 		animateSection('map', 'fadeInUp', 200);
 		animateSection('prices', 'fadeInUp', 200);
 		animateSection('weather', 'fadeInUp', 200);
