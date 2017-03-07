@@ -168,7 +168,7 @@
 					}, counterTime);
 
 					setTimeout(function() {
-						testimonial.find('.to-animate-2').each(function( k ) {
+						$section.find('.to-animate-2').each(function( k ) {
 							var el = $(this);
 							
 							setTimeout ( function () {
@@ -204,9 +204,9 @@
 		animateSection('prices', 'fadeInUp', 200);
 		animateSection('weather', 'fadeInUp', 200);
 		
-		animateSectionAndChildren('testimonials', -400, 'fadeInUp', 'fadeInDown', 200, 0);
+		//animateSectionAndChildren('testimonials', -400, 'fadeInUp', 'fadeInDown', 200, 0);
 		animateSectionAndChildren('services', -400, 'fadeInUp', 'bounceIn', 200, 0);
-		animateSectionAndChildren('counters', 400, 'fadeInUp', 'bounceIn', 200, 400);
+		//animateSectionAndChildren('counters', 400, 'fadeInUp', 'bounceIn', 200, 400);
 	});
 
 
