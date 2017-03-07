@@ -395,30 +395,51 @@
 						</ul>
 					</div>
 
-					<form class="col-md-6 to-animate" action="https://formspree.io/fabio.difrancesco@gmail.com" method="POST">
+					<form class="col-md-6 to-animate contacts-form" action="https://formspree.io/fabio.difrancesco@gmail.com" method="POST">
 						<h3>Inviaci la tua richiesta compilando i campi sottostanti</h3>
 						<div class="form-group ">
 							<label for="name" class="sr-only">Nome</label>
-							<input id="name" class="form-control" placeholder="Nome" type="text" name="name">
+							<input id="name" class="form-control" placeholder="Nome" type="text" name="name" />
 						</div>
 						<div class="form-group ">
 							<label for="email" class="sr-only">Email</label>
-							<input id="email" class="form-control" placeholder="Email" type="email" name="_replyto">
+							<input id="email" class="form-control" placeholder="Email" type="email" name="email" />
 						</div>
 						<div class="form-group ">
 							<label for="phone" class="sr-only">Telefono</label>
-							<input id="phone" class="form-control" placeholder="Telefono" type="text" name="phone">
+							<input id="phone" class="form-control" placeholder="Telefono" type="text" name="phone" />
 						</div>
 						<div class="form-group ">
 							<label for="message" class="sr-only">Messaggio</label>
-							<textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Messaggio"></textarea>
+							<textarea id="message" name="message" rows="5" class="form-control" placeholder="Messaggio"></textarea>
+						</div>
+						<div class="form-group ">
+							<label for="gotcha" class="sr-only">Gotcha</label>
+							<input type="text" name="_gotcha" style="display:none" />
 						</div>
 						<div class="form-group ">
 							<input type="hidden" name="_next" value="thanks.html" />
-							<input type="hidden" name="_subject" value="New submission!" />
+							<input type="hidden" name="_subject" value="Richiesta informazioni da parte di sito casa vacanze" />
 							<input class="btn btn-primary btn-lg" value="Invia" type="submit" />
 						</div>
 					</form>	
+					<script type="text/javascript">
+						jQuery(document).ready(function($) {
+							$('form.contacts-form').on('submit', function(e) {
+								e.preventDefault();
+								$.ajax({
+									method: 'POST',
+									dataType: 'json',
+									url: $(this).attr('action'),
+									data: $(this).serialize(),
+									success: function(data) {
+										alert(data);
+									}
+								});
+								return false;
+							});
+						});
+					</script>
 				</div>
 			</div>
 		</section>
