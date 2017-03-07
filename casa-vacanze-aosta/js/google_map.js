@@ -15,7 +15,7 @@ function init() {
     var marker = new google.maps.Marker({
 		position: defaultLatlng,
 		map: map,
-		title: 'Siamo qui'
+		title: 'Siamo qui',
 		icon: 'images/loc.png'
 	});
 	
