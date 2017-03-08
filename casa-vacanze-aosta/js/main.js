@@ -71,7 +71,7 @@
 		var $el = $('#navbar > ul');
 		$el.find('li').removeClass('active');
 		$el.each(function(){
-			$(this).find('a[data-nav-section="'+section+'"]').closest('li').addClass('active');
+			$(this).find('a[data-nav-section="' + section + '"]').closest('li').addClass('active');
 		});
 	};
 
@@ -98,8 +98,6 @@
 
 	// Window Scroll
 	var windowScroll = function() {
-		var lastScrollTop = 0;
-
 		$(window).scroll(function(event){
 		   	var header = $('#fh5co-header'),
 				scrlTop = $(this).scrollTop();
@@ -195,13 +193,11 @@
 
 
 		// Animations
-		animateSection('home', 'fadeInUp', 200);
-		animateSection('intro', 'fadeInRight', 1000);
+        animateSection('home', 'fadeInRight', 200);
 		animateSection('house', 'fadeInUp', 200);
-		//animateSection('about', 'fadeInUp', 200);
+        animateSection('prices', 'fadeInUp', 200);
+        animateSection('map', 'fadeInUp', 200);
 		animateSection('contacts', 'fadeInUp', 200);
-		animateSection('map', 'fadeInUp', 200);
-		animateSection('prices', 'fadeInUp', 200);
 		animateSection('weather', 'fadeInUp', 200);
 		
 		//animateSectionAndChildren('testimonials', -400, 'fadeInUp', 'fadeInDown', 200, 0);
